@@ -1,0 +1,22 @@
+# システムファイルを除外
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ディレクトリ
+Library/
+Desktop/
+Documents/
+Downloads/
+Google Drive
+Movies/
+Music/
+Pictures/
+Public/
+
+# Python関連
+*.pyc
+__pycache__/
+
+# VSCode関連
+.vscode/
