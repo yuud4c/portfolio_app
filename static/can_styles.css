@@ -1,0 +1,58 @@
+.header {
+    text-align: center;
+    height: auto;
+    letter-spacing: 0.1em;
+}
+
+.header h1{
+    display: inline;
+    position: relative;
+}   
+
+.header p br span{
+    display: inline-block;
+    position: relative;
+    animation: clip-text 1s
+    ease-in-out forwards;
+    animation-delay: 1s;
+
+}
+
+&::before {
+    content: "";
+    display: block;
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    animation: clip-cover .5s
+    ease-in-out forwards;
+    animation-delay: .5s;
+}
+
+@keyframes clip-text {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0 );
+    }
+}
+@keyframes clip-cover {
+    from {
+        clip-path: inset(0 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 100% 0);
+    }
+}
+
+.header span {
+    color: red;
+    border-bottom: 2px solid rgb(79, 47, 209)
+}
+
+a {
+    display: block;
+    width: fit-content;
+    margin: 50px auto;
+}
