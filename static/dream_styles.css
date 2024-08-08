@@ -1,7 +1,7 @@
 .header {
     text-align: center;
     letter-spacing: 0.1em;
-    margin: 20px auto; /*ここからアニメやる*/
+    margin: 20px auto; 
     animation-name: blurAnimes;
     animation-duration: 2s;
     animation-fill-mode: forwards;

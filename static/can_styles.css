@@ -1,49 +1,17 @@
 .header {
     text-align: center;
-    height: auto;
-    letter-spacing: 0.1em;
+    padding: 50px 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    color: #000000; 
+    background-color: #ffffff;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
 }
 
-.header h1{
-    display: inline;
-    position: relative;
-}   
-
-.header p br span{
-    display: inline-block;
-    position: relative;
-    animation: clip-text 1s
-    ease-in-out forwards;
-    animation-delay: 1s;
-
-}
-
-&::before {
-    content: "";
-    display: block;
-    background-color: black;
-    position: absolute;
-    inset: 0;
-    animation: clip-cover .5s
-    ease-in-out forwards;
-    animation-delay: .5s;
-}
-
-@keyframes clip-text {
-    from {
-        clip-path: inset(100% 0 0 0);
-    }
-    to {
-        clip-path: inset(0 0 0 0 );
-    }
-}
-@keyframes clip-cover {
-    from {
-        clip-path: inset(0 0 0 0);
-    }
-    to {
-        clip-path: inset(0 0 100% 0);
-    }
+.header.can {
+    animation-name: kf_header;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 .header span {
@@ -51,8 +19,20 @@
     border-bottom: 2px solid rgb(79, 47, 209)
 }
 
-a {
+
+@keyframes kf_header {
+    100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+
+.footer {
     display: block;
-    width: fit-content;
-    margin: 50px auto;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
 }
